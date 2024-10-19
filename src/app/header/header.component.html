@@ -1,10 +1,11 @@
     <header (click)="getPathname()">
-      <div class='logo' ref={logoRef}>
+      <a class='logo' href="/">
         <figure>
             <img src='assets/logo.png' alt='Logo.' />
         </figure>
-      </div>
-      <div class='lg_links'> <nav class='head_links'>
+      </a>
+      <div class='lg_links'>
+      <nav class='head_links'>
       <ul>
         <li *ngFor="let link of headersLink">
           <a [href]="link.path" [ngClass]="currentPathname == link.path ? 'active' : ''">
@@ -13,5 +14,13 @@
         </li>
       </ul>
     </nav>
+  </div>
+  <div class='sm_links'>
+    <app-offcanvas [showOffcanvas]="showOffcanvas"></app-offcanvas>
+      <div class='close_menu' tabindex="" (click)="toggleShowOffcanvas()" >
+        <figure >
+          <img src="assets/menu-hamburger.svg" alt='Menu' />
+        </figure>
       </div>
+  </div>
     </header>

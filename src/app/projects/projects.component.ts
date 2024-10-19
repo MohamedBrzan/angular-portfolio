@@ -27,13 +27,10 @@ export class ProjectsComponent {
   // Method to open the modal
   openModal() {
     this.showModal = true;
-    console.log('model open')
-    console.log(this.state)
   }
 
   // Method called when the modal is closed
   handleClose() {
     this.showModal = false;
-    console.log('model closed')
   }
 }

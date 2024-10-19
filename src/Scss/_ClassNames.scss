@@ -1,5 +1,17 @@
 @use './Mixins' as *;
 
+%custom_menu {
+  figure {
+    width: 2rem;
+    img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    cursor: pointer;
+  }
+}
+
 %responsive_width {
   margin: auto;
   width: 100%;

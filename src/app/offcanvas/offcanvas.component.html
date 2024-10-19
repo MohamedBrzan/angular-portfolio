@@ -1,0 +1,11 @@
+<section [ngClass]="showOffcanvas ? 'nav_offcanvas show' : 'nav_offcanvas'" id="nav_offcanvas">
+   <nav class="head_links">
+      <ul>
+         <li><a class="" href="/about">About</a></li>
+         <li><a class="" href="/projects">projects</a></li>
+      </ul>
+   </nav>
+   <div class="close_menu" (click)="closeOffcanvas()">
+      <figure><img src="assets/close.svg" alt="Menu"></figure>
+   </div>
+</section>
