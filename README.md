@@ -6,10 +6,10 @@ Hello! I'm a passionate software engineer specializing in creating scalable, use
 
 ## 🛠️ Technologies & Tools
 - **Languages:** JavaScript (ES6+), HTML5, CSS3, TypeScript
-- **Frameworks/Libraries:** Angular 1.5, Node.js, Express.js, Mongoose
-- **Databases:** MongoDB, MySQL
+- **Frameworks/Libraries:** Angular 19, SCSS
+<!-- - **Databases:** MongoDB, MySQL -->
 - **Version Control:** Git, GitHub
-- **Tools:** Docker, Jenkins, Postman, VS Code
+- **Tools:** VS Code
 
 ## 🌟 Featured Projects
 ### [Project 1: Customer Request System (CRS)](https://github.com/username/crs)
