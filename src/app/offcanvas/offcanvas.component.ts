@@ -21,4 +21,14 @@ export class OffcanvasComponent {
     this.onClose.emit(); // Emit event to parent
   }
 
+  // Methods to add or remove class when hovering over elements
+  addHoverClass() {
+    document.getElementById('inner_cursor')!.classList.add('open');
+    document.getElementById('outer_cursor')!.classList.add('open');
+  }
+
+  removeHoverClass() {
+    document.getElementById('inner_cursor')!.classList.remove('open');
+    document.getElementById('outer_cursor')!.classList.remove('open');
+  }
 }

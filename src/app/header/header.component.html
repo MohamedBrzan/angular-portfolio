@@ -7,7 +7,7 @@
       <div class='lg_links'>
       <nav class='head_links'>
       <ul>
-        <li *ngFor="let link of headersLink">
+        <li *ngFor="let link of headersLink" (mouseenter)="addHoverClass()" (mouseleave)="removeHoverClass()">
           <a [href]="link.path" [ngClass]="currentPathname == link.path ? 'active' : ''">
             {{link.name}}
           </a>
