@@ -1,32 +1,44 @@
+<section *ngIf="loading; else projectsSection">
+  <p class="loading">loading...</p>
+</section>
 
-
- <section class='projects'>
-      <div class='title'>
-        <h1>Projects.</h1>
+<ng-template #projectsSection>
+  <section class='projects'>
+    <div class='title'>
+      <h1>Projects.</h1>
+    </div>
+    <hr />
+    <section class='projects_sections'>
+      <div *ngFor="let project of projects.data; let index = index" class='project' tabindex="{{index}}" (click)="openModal(); sendProject(project);">
+        <figure>
+          <img
+            [src]="project.image"
+            [alt]="project.title"
+            loading='lazy'
+          />
+        </figure>
+        <div class='content'>
+          <div class='text'>
+            <h3>{{project.title}}</h3>
+            <p>{{project.desc}}</p>
+            <div class='tech'>
+              <span *ngFor="let tech of project.techs">{{tech}}</span>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!project.released" class='soon'>
+          <strong>coming soon</strong>
+        </div>
       </div>
-      <hr />
-      <section class='projects_sections'>
-        @for (project of projects.data; track $index) {
-              <div class='project' tabindex="$index" (click)="openModal(); sendProject(project);">
-                <figure>
-                    <img [src]="project.image" [alt]="project.title" loading='eager' />
-                </figure>
-                <div class='content'>
-                    <div class='text'>
-                      <h3>{{project.title}}</h3>
-                      <p>{{project.desc}}</p>
-                      <div class='tech'>
-                          <span *ngFor="let tech of project.techs">{{tech}}</span>
-                      </div>
-                    </div>
-                </div>
-                <div *ngIf="!project.released" class='soon'>
-                    <strong>coming soon</strong>
-                </div>
-              </div>
-            } @empty {
-              <p>there's no projects to show.</p>
-            }
-            <app-see-project [state]="state" [showCanvas]="showModal" (onClose)="handleClose()"></app-see-project>
-        </section>
-		</section>
+      <!-- Show empty state if there are no projects -->
+      <p *ngIf="projects.data.length === 0">there's no projects to show.</p>
+    </section>
+  </section>
+
+  <!-- Modal for the selected project -->
+  <app-see-project
+    [state]="state"
+    [showCanvas]="showModal"
+    (onClose)="handleClose()">
+  </app-see-project>
+</ng-template>

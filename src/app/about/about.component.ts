@@ -82,4 +82,15 @@ export class AboutComponent {
       url: { name: '', link: '' },
     },
   ];
+  loading: boolean = true;
+  ngOnInit() {
+    this.loadData();
+  }
+
+  loadData() {
+    // Simulate async data fetching
+    setTimeout(() => {
+      this.loading = false; // Stop showing the loading icon when data is fetched
+    }, 1000); // Simulate a 3-second data fetching delay
+  }
 }

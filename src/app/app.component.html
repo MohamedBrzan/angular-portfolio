@@ -1,5 +1,11 @@
-<app-header></app-header>
-<app-custom-cursor></app-custom-cursor>
-<main class="main">
-  <router-outlet />
-</main>
+<section *ngIf="loading; else appSection">
+  <p class="loading">loading...</p>
+</section>
+
+<ng-template #appSection>
+  <app-header></app-header>
+  <app-custom-cursor></app-custom-cursor>
+  <main class="main">
+    <router-outlet />
+  </main>
+</ng-template>

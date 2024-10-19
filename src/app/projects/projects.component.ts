@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../services/projects/projects.service';
 import {  NgForOf, NgIf } from '@angular/common';
 import { SeeProjectComponent } from '../see-project/see-project.component';
@@ -11,25 +11,32 @@ import Project from '../../interfaces/projects';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  loading: boolean = true;
   projects: any;
   constructor(private projectsDI: ProjectsService) {
     this.projects = projectsDI;
   }
   state!: Project;
-  // Control modal visibility
   showModal: boolean = false;
 
+  ngOnInit() {
+    this.loadData();
+  }
+
+  loadData() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  }
   sendProject(project: Project) {
     this.state = project;
   }
 
-  // Method to open the modal
   openModal() {
     this.showModal = true;
   }
 
-  // Method called when the modal is closed
   handleClose() {
     this.showModal = false;
   }
