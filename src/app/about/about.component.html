@@ -1,1 +1,56 @@
-<p>about works!</p>
+    <section class='about'>
+      <div class='title about_me'>
+        <h1>Experience.</h1>
+      </div>
+      <hr />
+
+      <div class='work_data'>
+        <div *ngFor="let exp of experience; let i = index" class="work_brief">
+          <div class="position">
+            <div class="top_sec">
+              <div class="title">
+                <h2>{{ exp.title }}</h2>
+                <figure>
+                  <img [src]="exp.image" [alt]="exp.title" />
+                </figure>
+              </div>
+              <a [href]="exp.url.link" target="_blank" rel="noopener noreferrer">{{ exp.url.name }}</a>
+            </div>
+            <p>
+              <strong>
+                <small>
+                  {{ exp.date.from }}<ng-container *ngIf="exp.date.to"> - {{ exp.date.to }}</ng-container>
+                </small>
+              </strong>
+            </p>
+            <p>{{ exp.desc }}</p>
+          </div>
+          <hr />
+        </div>
+
+      </div>
+      <div class='title read'>
+        <h1>Read.</h1>
+      </div>
+
+      <div class='work_data read'>
+        <div *ngFor="let item of read; let i = index" class="work_brief">
+          <div class="position">
+            <div class="top_sec">
+              <div class="title">
+                <h2>{{ item.title }}</h2>
+                <figure>
+                  <img [src]="item.image" [alt]="item.title" />
+                </figure>
+              </div>
+              <a [href]="item.url.link" target="_blank" rel="noopener noreferrer">{{ item.url.name }}</a>
+            </div>
+            <p>{{ item.desc }}</p>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div class='fixed_intro'>
+        <h1>About Me.</h1>
+      </div>
+    </section>
