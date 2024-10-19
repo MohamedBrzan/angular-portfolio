@@ -1,4 +1,4 @@
-<div *ngIf="state && showCanvas" class="see_project active" (click)="closeCanvas()">
+<div *ngIf="state && showCanvas" class="see_project active" >
       <div class='backdrop' ></div>
       <div class='modal'>
         <div class='content'>
@@ -6,10 +6,9 @@
             <h1>
               <strong>{{state.title}}</strong>
             </h1>
-            <figure
-            >
-              <!-- <img src="CloseMenu" alt='' width='100%' /> -->
-            </figure>
+            <div class="close-icon" (click)="closeCanvas()" >
+             <i class="fa-solid fa-xmark"></i>
+            </div>
           </div>
 
           <p class='project_desc'>{{state.desc}}</p>
@@ -34,9 +33,9 @@
           <div class='website_url'>
             <div class='top'>
               <h3>Website</h3>
-              <figure>
-                <!-- <img [src]="state.world" [alt]="state.title" /> -->
-              </figure>
+              <div>
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
             </div>
             <a [href]="state.website">{{state.website}}</a>
           </div>
@@ -44,6 +43,7 @@
         <div class='github'>
             <a [href]="state.github" class='git_content'>
               <h2>Open Project</h2>
+              <div class="icon"><i class="fa-brands fa-github"></i></div>
             </a>
         </div>
       </div>
