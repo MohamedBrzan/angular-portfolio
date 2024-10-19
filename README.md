@@ -1,4 +1,4 @@
-![Portfolio Banner](https://www.pexels.com/photo/photo-of-portfolio-text-on-pink-background-12781380)
+![Portfolio Banner](https://cdn.pixabay.com/photo/2023/09/27/10/48/portfolio-8279357_1280.jpg)
 
 # Welcome to My Professional Portfolio
 
@@ -21,7 +21,7 @@ Hello! I'm a passionate software engineer specializing in creating scalable, use
 - **Technologies:** Express.js, Mongoose, RESTful API
 
 ## 📫 Get in Touch
-- **Email:** your.email@example.com
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- **Email:** mohamedbrzan.dev@gmail.com
+- **LinkedIn:** [linkedin.com/in/mohamed-brzan-01966518a](https://www.linkedin.com/in/mohamed-brzan-01966518a/)
 
 Feel free to explore my work and connect with me for any collaboration or professional opportunities!
