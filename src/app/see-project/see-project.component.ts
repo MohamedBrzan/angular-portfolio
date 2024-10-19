@@ -1,5 +1,5 @@
 import { NgClass, NgForOf, NgIf } from '@angular/common';
-import { Component,  EventEmitter,  Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component,  EventEmitter,  Input, Output} from '@angular/core';
 import Project from '../../interfaces/projects';
 import { ProjectsComponent } from '../projects/projects.component';
 
@@ -10,14 +10,10 @@ import { ProjectsComponent } from '../projects/projects.component';
   templateUrl: './see-project.component.html',
   styleUrl: '../projects/projects.component.scss',
 })
-export class SeeProjectComponent implements OnChanges {
+export class SeeProjectComponent {
   @Input() state!: Project;
   // Input to control modal visibility from parent
   @Input() showCanvas: boolean = false;
-
-  ngOnChanges(changes: SimpleChanges): void {
-      console.log(this.showCanvas)
-  }
 
   // Output event to notify parent when modal is closed
   @Output() onClose = new EventEmitter<void>();
@@ -26,6 +22,5 @@ export class SeeProjectComponent implements OnChanges {
   closeCanvas() {
     this.showCanvas = false;
     this.onClose.emit(); // Emit event to parent
-    console.log('close canvas emitted')
   }
 }

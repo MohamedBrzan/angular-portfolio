@@ -1,5 +1,5 @@
 <div *ngIf="state && showCanvas" class="see_project active" >
-      <div class='backdrop' ></div>
+      <div class='backdrop' (click)="closeCanvas()" ></div>
       <div class='modal'>
         <div class='content'>
           <div class='project_title'>
