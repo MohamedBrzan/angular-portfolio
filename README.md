@@ -1,27 +1,27 @@
-# AngularPortfolio
+![Portfolio Banner](https://www.pexels.com/photo/photo-of-portfolio-text-on-pink-background-12781380)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+# Welcome to My Professional Portfolio
 
-## Development server
+Hello! I'm a passionate software engineer specializing in creating scalable, user-friendly applications. This portfolio showcases the projects I've worked on, highlighting my technical skills, problem-solving ability, and experience working with diverse teams and clients like LG Middle East, Tasaheel, and FedEx.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Technologies & Tools
+- **Languages:** JavaScript (ES6+), HTML5, CSS3, TypeScript
+- **Frameworks/Libraries:** Angular 1.5, Node.js, Express.js, Mongoose
+- **Databases:** MongoDB, MySQL
+- **Version Control:** Git, GitHub
+- **Tools:** Docker, Jenkins, Postman, VS Code
 
-## Code scaffolding
+## 🌟 Featured Projects
+### [Project 1: Customer Request System (CRS)](https://github.com/username/crs)
+- **Description:** A dynamic system that streamlines customer request management for a leading electronics brand.
+- **Technologies:** Angular, Node.js, MongoDB
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### [Project 2: Service Request Automation (SRA)](https://github.com/username/sra)
+- **Description:** Automates service requests for various logistics companies, improving efficiency and reducing response times.
+- **Technologies:** Express.js, Mongoose, RESTful API
 
-## Build
+## 📫 Get in Touch
+- **Email:** your.email@example.com
+- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Feel free to explore my work and connect with me for any collaboration or professional opportunities!
