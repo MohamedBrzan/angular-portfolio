@@ -7,7 +7,7 @@
       <hr />
       <section class='projects_sections'>
         @for (project of projects.data; track $index) {
-              <div class='project'>
+              <div class='project' tabindex="$index" (click)="openModal(); sendProject(project);">
                 <figure>
                     <img [src]="project.image" [alt]="project.title" loading='eager' />
                 </figure>
@@ -24,9 +24,9 @@
                     <strong>coming soon</strong>
                 </div>
               </div>
-          } @empty {
-            <p>there's no projects to show.</p>
-          }
-          <app-see-project></app-see-project>
+            } @empty {
+              <p>there's no projects to show.</p>
+            }
+            <app-see-project [state]="state" [showCanvas]="showModal" (onClose)="handleClose()"></app-see-project>
         </section>
 		</section>

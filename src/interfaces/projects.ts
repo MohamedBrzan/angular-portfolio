@@ -3,7 +3,7 @@ export default interface Project {
   desc: string;
   about: string;
   categories: string[];
-  image?: string;
+  image: string;
   techs: string[];
   released: boolean;
   website: string;

@@ -1,58 +1,50 @@
-
-  <div class='see_project'>
-      <div class='backdrop'></div>
+<div *ngIf="state && showCanvas" class="see_project active" (click)="closeCanvas()">
+      <div class='backdrop' ></div>
       <div class='modal'>
         <div class='content'>
           <div class='project_title'>
             <h1>
-              <!-- <strong>{title}</strong> -->
+              <strong>{{state.title}}</strong>
             </h1>
             <figure
             >
-              <!-- <img src={CloseMenu} alt='Close Image' width='100%' /> -->
+              <!-- <img src="CloseMenu" alt='' width='100%' /> -->
             </figure>
           </div>
 
-          <!-- <p class='project_desc'>{desc}</p> -->
+          <p class='project_desc'>{{state.desc}}</p>
 
           <figure>
-            <!-- <img src={image} alt={title} loading='eager' /> -->
+            <img [src]="state.image" [alt]="state.title" loading='eager' />
           </figure>
           <div class='project_about'>
-            <!-- <h3>About</h3>
-            <p>{about}</p> -->
+            <h3>About</h3>
+            <p>{{state.about}}</p>
           </div>
           <div class='project_techs'>
             <h3>Technologies</h3>
             <div class='techs'>
-              <!-- {techs.map((tech, index) => (
-                <span key={index}>
+              <span *ngFor="let tech of state.techs">
                   <strong>
-                    <small>{tech}</small>
+                    <small>{{tech}}</small>
                   </strong>
                 </span>
-              ))} -->
             </div>
           </div>
           <div class='website_url'>
             <div class='top'>
               <h3>Website</h3>
               <figure>
-                <!-- <img src={world} alt={title} /> -->
+                <!-- <img [src]="state.world" [alt]="state.title" /> -->
               </figure>
             </div>
-            <!-- <Link to={website}>{website}</Link> -->
+            <a [href]="state.website">{{state.website}}</a>
           </div>
         </div>
         <div class='github'>
-          <!-- <Link to={github}> -->
-            <div class='git_content'>
+            <a [href]="state.github" class='git_content'>
               <h2>Open Project</h2>
-              <!-- <figure>
-                <img src={externalLink} alt={title} />
-              </figure> -->
-            </div>
-          <!-- </Link> -->
+            </a>
         </div>
       </div>
     </div>
